@@ -1,0 +1,74 @@
+openapi: 3.1.0
+info:
+  title: MKHAS BSynchro RJP API
+  description: |
+    This API exposes two endpoints. 
+    first endpoint: accepts the userinfo (CustomerId, initialCredit).
+    once the endpoint is called, a new account is opened connected to the user with the ID = CustomerId,
+    if initialCredit>0 a transaction will be sent to the new account 
+    second endpoint: gets the userInfo showing Name, Surname, balance, and transactions
+  version: 0.0.1
+paths:
+  /accounts/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: Get userInfo
+      description: Retrieves the userInfo including Name, Surname, Balance, and Transactions.
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Name:
+                    type: string
+                  Surname:
+                    type: string
+                  Balance:
+                    type: integer
+                  Transactions:
+                    type: array
+                    maxItems: 99
+                    items:
+                      type: object
+                      properties:
+                        senderID:
+                          type: string
+                        recieverID:
+                          type: string
+                        amount:
+                          type: integer
+                        timestamp:
+                          type: string
+                          format: date-time
+                          description: date and time the transaction occured
+        #"1XX":
+        #"2XX":
+        #"3XX":
+        #"4XX":
+        #"5XX":
+    post:
+      summary: Create new account
+      description: |
+        Create account linked to CustomerId, if initialCredit>0, create a new transaction as well
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: integer
+      responses:
+        "200":
+          description: Operation succeeded.
+        #"1XX":
+        #"2XX":
+        #"3XX":
+        #"4XX":
+        #"5XX":
