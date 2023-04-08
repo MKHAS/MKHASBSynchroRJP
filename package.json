@@ -1,0 +1,19 @@
+{
+  "name": "mkhasbsynchrorjp",
+  "version": "1.0.0",
+  "description": "BSynchro RJP API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MKHAS/MKHASBSynchroRJP.git"
+  },
+  "author": "MKHAS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MKHAS/MKHASBSynchroRJP/issues"
+  },
+  "homepage": "https://github.com/MKHAS/MKHASBSynchroRJP#readme"
+}
