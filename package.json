@@ -4,6 +4,8 @@
   "description": "BSynchro RJP API",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +20,8 @@
   "homepage": "https://github.com/MKHAS/MKHASBSynchroRJP#readme",
   "dependencies": {
     "fastify": "^4.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
