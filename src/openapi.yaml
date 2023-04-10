@@ -18,6 +18,7 @@ paths:
           type: integer
     get:
       summary: Get userInfo
+      operationId: getAccount
       description: Retrieves the userInfo including Name, Surname, Balance, and Transactions.
       responses:
         "200":
@@ -56,6 +57,7 @@ paths:
         #"5XX":
     post:
       summary: Create new account
+      operationId: addAccount
       description: |
         Create account linked to CustomerId, if initialCredit>0, create a new transaction as well
       requestBody:
