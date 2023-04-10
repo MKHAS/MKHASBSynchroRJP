@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/MKHAS/MKHASBSynchroRJP#readme",
   "dependencies": {
-    "fastify": "^4.15.0"
+    "fastify": "^4.15.0",
+    "nanoid": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
