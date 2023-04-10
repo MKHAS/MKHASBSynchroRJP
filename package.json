@@ -20,6 +20,7 @@
   "homepage": "https://github.com/MKHAS/MKHASBSynchroRJP#readme",
   "dependencies": {
     "fastify": "^4.15.0",
+    "fastify-openapi-glue": "^4.1.3",
     "nanoid": "^3.0.0"
   },
   "devDependencies": {

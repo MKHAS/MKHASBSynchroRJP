@@ -7,8 +7,11 @@ fastify.get("/", async (req, rep) => {
 });
 
 //#region GET
-fastify.get("/accounts", async (req, res) => {
-  //send back an account
+fastify.get("/accounts/:id", async (req, res) => {
+  // get id
+  // find account
+  // return account if it exists
+  // return 404 otherwise
   res.send({
     Name: "john",
     Surname: "doe",
